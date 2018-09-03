@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="@string/category_home" />
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/historyicon"
+        android:title="@string/category_history" />
+
+    <item
+        android:id="@+id/transport"
+        android:icon="@drawable/public_transport_subway"
+        android:title="@string/category_transport" />
+    <item
+        android:id="@+id/culture"
+        android:icon="@drawable/masks"
+        android:title="@string/category_culture" />
+
+    <item
+        android:id="@+id/places_to_visit"
+        android:icon="@drawable/maps_and_flags"
+        android:title="@string/category_places_to_visit" />
+    <item
+        android:id="@+id/eatery"
+        android:icon="@drawable/restaurant"
+        android:title="@string/category_eatery" />
+    <item
+        android:id="@+id/hidden_gem"
+        android:icon="@drawable/sun_hidden_partially_by_cloud"
+        android:title="@string/category_hidden_gem" />
+
+</menu>
