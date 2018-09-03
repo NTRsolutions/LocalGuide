@@ -16,6 +16,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CultureActivity"
+            android:label="@string/category_culture"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EateryActivity"
+            android:label="@string/category_eatery"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HiddenGemActivity"
+            android:label="@string/category_hidden_gem"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/category_history"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PlacesToVisitAvtivity"
+            android:label="@string/category_places_to_visit"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".TransportActivity"
+            android:label="@string/category_transport"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".HomeActivity"
+            android:label="@string/category_home"
+            android:parentActivityName=".MainActivity"/>
+
     </application>
 
 </manifest>
