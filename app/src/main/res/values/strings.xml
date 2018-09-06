@@ -69,4 +69,7 @@ BEST operates one of India's largest fleets of buses. The bus transport service 
     </string>
     <string name="jetty">MUMBAI: It is the time of the year when bird lovers throng the Sewri jetty with binoculars and cameras to observe congregations of various species of migratory birds. While the flamingos, have not kept their date with the Sewri-Mahul mudflats, waders like sandpipers, gulls and stints can be seen in good numbers. But birdwatchers coming from distant suburbs, lugging their spotting scopes and cameras, are returning disappointed as the jetty is in a dilapidated condition and police officials stationed at the spot have barricaded the area as a safety measure.
 </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

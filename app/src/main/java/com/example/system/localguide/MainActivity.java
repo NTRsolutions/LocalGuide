@@ -3,6 +3,7 @@ package com.example.system.localguide;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,6 +15,9 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
+    FragmentTransaction fragmentTransaction;
+    private NavigationView navView;
+
 
 
     @Override
@@ -24,7 +28,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //To enable a drawer option
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-
+        navView = findViewById(R.id.navView);
+        navView.setNavigationItemSelectedListener(this);
 
         mDrawerLayout.addDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
@@ -119,109 +124,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.home) {
+            startActivity(new Intent(this, MainActivity.class));
 
-            // Set a click listener on that View
-            mDrawerLayout.setOnClickListener(
-                    new View.OnClickListener() {
-                        // The code in this method will be executed when the numbers View is clicked on.
-                        @Override
-                        public void onClick(View view) {
-                            Intent numbersIntent = new Intent(MainActivity.this, HomeActivity.class);
-                            startActivity(numbersIntent);
-                        }
-                    }
-            );
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
 
         } else if (id == R.id.history) {
-            // Set a click listener on that View
-            mDrawerLayout.setOnClickListener(
-                    new View.OnClickListener() {
-                        // The code in this method will be executed when the numbers View is clicked on.
-                        @Override
-                        public void onClick(View view) {
-                            Intent numbersIntent = new Intent(MainActivity.this, HistoryActivity.class);
-                            startActivity(numbersIntent);
-                        }
-                    }
-            );
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
+            startActivity(new Intent(this, HistoryActivity.class));
 
-        } else if (id == R.id.culture) {// Set a click listener on that View
-            mDrawerLayout.setOnClickListener(
-                    new View.OnClickListener() {
-                        // The code in this method will be executed when the numbers View is clicked on.
-                        @Override
-                        public void onClick(View view) {
-                            Intent numbersIntent = new Intent(MainActivity.this, CultureActivity.class);
-                            startActivity(numbersIntent);
-                        }
-                    }
-            );
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
 
+        } else if (id == R.id.culture) {
+            startActivity(new Intent(this, CultureActivity.class));
         } else if (id == R.id.places_to_visit) {
-            // Set a click listener on that View
-            mDrawerLayout.setOnClickListener(
-                    new View.OnClickListener() {
-                        // The code in this method will be executed when the numbers View is clicked on.
-                        @Override
-                        public void onClick(View view) {
-                            Intent numbersIntent = new Intent(MainActivity.this, PlacesToVisitAvtivity.class);
-                            startActivity(numbersIntent);
-                        }
-                    }
-            );
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
+            startActivity(new Intent(this, PlacesToVisitAvtivity.class));
 
         } else if (id == R.id.eatery) {
-            // Set a click listener on that View
-            mDrawerLayout.setOnClickListener(
-                    new View.OnClickListener() {
-                        // The code in this method will be executed when the numbers View is clicked on.
-                        @Override
-                        public void onClick(View view) {
-                            Intent numbersIntent = new Intent(MainActivity.this, EateryActivity.class);
-                            startActivity(numbersIntent);
-                        }
-                    }
-            );
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
+            startActivity(new Intent(this, EateryActivity.class));
 
         } else if (id == R.id.hidden_gem) {
-            // Set a click listener on that View
-            mDrawerLayout.setOnClickListener(
-                    new View.OnClickListener() {
-                        // The code in this method will be executed when the numbers View is clicked on.
-                        @Override
-                        public void onClick(View view) {
-                            Intent numbersIntent = new Intent(MainActivity.this, HiddenGemActivity.class);
-                            startActivity(numbersIntent);
-                        }
-                    }
-            );
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
+            startActivity(new Intent(this, HiddenGemActivity.class));
 
         } else if (id == R.id.transport) {
-            // Set a click listener on that View
-            mDrawerLayout.setOnClickListener(
-                    new View.OnClickListener() {
-                        // The code in this method will be executed when the numbers View is clicked on.
-                        @Override
-                        public void onClick(View view) {
-                            Intent numbersIntent = new Intent(MainActivity.this, TransportActivity.class);
-                            startActivity(numbersIntent);
-                        }
-                    }
-            );
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
+            startActivity(new Intent(this, TransportActivity.class));
 
         }
 
